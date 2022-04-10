@@ -15,7 +15,7 @@ curl "$BG_IMG_URI" > background.jpg
 
 ## ffmpeg
 ffmpeg \
-  -loop 1 -r 1/4 -f image2 -s 1280x720 -i ./background.jpg \
+  -loop 1 -r 1/5 -f image2 -s 1280x720 -i ./background.jpg \
   -f pulse -i "SpotSink.monitor" \
   -c:a mp3 -c:v libx264 -preset ultrafast -vf "scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720,fps=30,format=yuv420p" \
   -f flv \
