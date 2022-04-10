@@ -23,7 +23,7 @@ RUN cd librespot && \
   ~/.cargo/bin/cargo build --release --no-default-features --features pulseaudio-backend
 
 # Setup Script
-COPY ./start.sh .
+COPY ./entrypoint.sh .
 
 # Start
-CMD ./start.sh
+CMD ./entrypoint.sh
