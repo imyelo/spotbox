@@ -1,9 +1,9 @@
-FROM ubuntu:22.04
+FROM ubuntu:20.04
 
 # Setup APT Dependencies
 RUN apt-get update -y
-RUN apt-get upgrade -y
-RUN apt-get install -y \
+RUN DEBIAN_FRONTEND=nointeractive apt-get upgrade -y
+RUN DEBIAN_FRONTEND=nointeractive apt-get install -y \
   curl git \
   build-essential libasound2-dev pkg-config \
   pulseaudio pulseaudio-utils \

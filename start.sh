@@ -6,7 +6,7 @@ pactl unload-module 0
 pactl load-module module-null-sink sink_name=SpotSink
 
 ## Setup Background Image
-curl "$BG_IMG_URI" > background.jpg
+curl -H "user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" "$BG_IMG_URI" > background.jpg
 
 ## librespot
 ./librespot/target/release/librespot \
@@ -15,7 +15,7 @@ curl "$BG_IMG_URI" > background.jpg
 
 ## ffmpeg
 ffmpeg \
-  -loop 1 -r 1/5 -f image2 -s 1280x720 -i ./background.jpg \
+  -loop 1 -r 15 -f image2 -s 1280x720 -i ./background.jpg \
   -f pulse -i "SpotSink.monitor" \
   -c:a mp3 -c:v libx264 -preset ultrafast -vf "scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720,fps=30,format=yuv420p" \
   -f flv \
