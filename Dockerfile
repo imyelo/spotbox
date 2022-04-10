@@ -20,7 +20,6 @@ RUN cd librespot && \
 
 # Setup Script
 COPY ./start.sh .
-RUN curl https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png > logo.png
 
 # Start
 CMD ./start.sh
