@@ -3,7 +3,11 @@ FROM ubuntu:22.04
 # Setup APT Dependencies
 RUN apt-get update -y
 RUN apt-get upgrade -y
-RUN apt-get install -y curl git build-essential libasound2-dev pkg-config ffmpeg pulseaudio pulseaudio-utils
+RUN apt-get install -y \
+  curl git \
+  build-essential libasound2-dev pkg-config \
+  pulseaudio pulseaudio-utils \
+  ffmpeg
 
 WORKDIR /app
 
