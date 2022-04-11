@@ -12,7 +12,7 @@ curl -H "user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.3
 ## librespot
 setsid ./librespot/target/release/librespot \
   -u "$USERNAME" -p "$PASSWORD" -n "$DEVICE_NAME" \
-  --disable-audio-cache \
+  --verbose --disable-audio-cache \
   --backend pulseaudio > librespot.log 2>&1 < /dev/null &
 
 ## ffmpeg
