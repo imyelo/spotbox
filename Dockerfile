@@ -26,8 +26,5 @@ RUN cd librespot && \
 COPY ./entrypoint.sh .
 COPY ./hosts .
 
-# Fix DNS
-RUN cat ./hosts >> /etc/hosts
-
 # Start
 CMD ./entrypoint.sh

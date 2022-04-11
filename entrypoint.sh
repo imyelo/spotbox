@@ -1,3 +1,6 @@
+## Fix DNS
+cat ./hosts >> /etc/hosts
+
 ## Setup PulseAudio
 rm -rf /var/run/pulse /var/lib/pulse /root/.config/pulse
 usermod -aG pulse,pulse-access root
